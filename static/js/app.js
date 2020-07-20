@@ -9,9 +9,9 @@ d3.json('samples.json').then((data) => {
     var sample_values = result.sample_values;
 
     var trace = {
-        y: otu_ids,
-        x: sample_values,
-        text: otu_labels,
+        y: otu_ids.slice(0, 10),
+        x: sample_values.slice(0, 10),
+        text: otu_labels.slice(0, 10),
         type: 'bar',
         orientation: 'h'
     };
